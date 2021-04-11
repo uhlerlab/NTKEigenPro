@@ -28,7 +28,7 @@ def kernel(pair1, pair2):
     sec = 1/np.pi * out * (np.pi - torch.acos(out))
     out = first + sec
 
-    # Set C below as large as possible for fast convergence
+    # Set C below as small as possible for fast convergence
     # C = 1 on real data usually works well
     # set C > 1 if EigenPro is not converging
     C = 1
