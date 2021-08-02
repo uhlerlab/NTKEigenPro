@@ -25,7 +25,7 @@ def kernel(pair1, pair2):
 
     first = 1/np.pi * (out * (np.pi - torch.acos(out)) \
                        + torch.sqrt(1. - torch.pow(out, 2))) * XX
-    sec = 1/np.pi * out * (np.pi - torch.acos(out))
+    sec = 1/np.pi * out * (np.pi - torch.acos(out)) * XX
     out = first + sec
 
     # Set C below as small as possible for fast convergence
